@@ -1,0 +1,10 @@
+# File nặng - ai clone về tự tải Stockfish
+stockfish/
+
+# Rác Python tự sinh
+__pycache__/
+*.pyc
+
+# Môi trường ảo (phòng khi sau này tạo)
+venv/
+.venv/
