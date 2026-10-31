@@ -19,7 +19,7 @@ Bốn tool, chia hai nhóm:
 ## Cài đặt
 
 ```bash
-pip install "mcp[cli]" python-chess
+pip install "mcp[cli]<2" python-chess
 ```
 
 Tải Stockfish ở [stockfishchess.org/download](https://stockfishchess.org/download/),
@@ -33,6 +33,19 @@ mcp dev chess-server.py
 ```
 
 Mở link Inspector hiện ra để test từng tool.
+
+## Chạy test
+
+Test nằm trong `tests/test_tools.py`, dùng `pytest`. Các test này **không cần
+Stockfish** (với `phan_tich_the_co` chỉ test trường hợp thiếu engine).
+
+```bash
+pip install -r requirements.txt pytest
+pytest
+```
+
+> Lưu ý: server dùng `mcp.server.fastmcp` của `mcp` 1.x, nên cần `mcp<2`
+> (bản 2.x đã đổi tên `FastMCP`).
 
 ## Cắm vào Claude Desktop
 
